@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="69">
-    <author>VertexFloat</author>
-    <version>1.0.0.8</version>
-    <title>
-        <en>Beware Of Straw</en>
-        <de>Achte Auf Dein Stroh</de>
-        <pl>Uważaj Na Słomę</pl>
-    </title>
-    <iconFilename>icon.png</iconFilename>
-    <multiplayer supported="true"/>
+﻿<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<modDesc descVersion='72'>
+	<author>VertexFloat</author>
+	<version>1.0.0.9</version>
+	<title>
+		<en>Beware Of Straw</en>
+		<de>Achte Auf Dein Stroh</de>
+		<pl>Uważaj Na Słomę</pl>
+	</title>
+	<iconFilename>icon.png</iconFilename>
+	<multiplayer supported='true'/>
 
-    <description>
+	<description>
 <en>
 <![CDATA[This modification allows the straw to be drawn in by the header of the working combine. After being pulled in, it passes through the threshing machine again and is ejected in a smaller amount. It is also possible that small amount of grain will be recovered when it passes through the combine again. However, it is not profitable. Therefore, be sure to raise the header. Otherwise, you may lose useful material.
 
@@ -50,6 +50,13 @@ Changelog (1.0.0.8) :
 - descVersion updated
 - minor bugs fixed
 - new mod icon
+
+Changelog (1.0.0.9) :
+- new game screenshots
+- descVersion updated
+- new mod icon
+
+For more information, help, and report issues please visit <a href='https://github.com/4c65736975/FS22_BewareOfStraw'>GitHub</a>.
 ]]>
 </en>
 <de>
@@ -91,6 +98,13 @@ Changelog (1.0.0.8) :
 - neue Spiel-Screenshots
 - kleine Fehler behoben
 - Neues Mod-Symbol
+
+Änderungsprotokoll (1.0.0.9) :
+- descVersion aktualisiert
+- neue Spielscreenshots
+- Neues Mod-Symbol
+
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/FS22_BewareOfStraw'>GitHub</a>.
 ]]>
 </de>
 <pl>
@@ -132,11 +146,18 @@ Dziennik zmian (1.0.0.8) :
 - nowe zrzuty ekranu z gry
 - naprawiono drobne błędy
 - nowa ikona modyfikacji
+
+Dziennik zmian (1.0.0.9) :
+- zaktualizowano descVersion
+- nowe zrzuty ekranu z gry
+- nowa ikona modyfikacji
+
+Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/FS22_BewareOfStraw'>GitHub</a>.
 ]]>
 </pl>
-    </description>
+	</description>
 
-    <extraSourceFiles>
-        <sourceFile filename="src/misc/BewareOfStraw.lua"/>
-    </extraSourceFiles>
+	<extraSourceFiles>
+		<sourceFile filename='src/BewareOfStraw.lua'/>
+	</extraSourceFiles>
 </modDesc>
