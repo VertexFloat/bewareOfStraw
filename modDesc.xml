@@ -1,7 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='72'>
+<modDesc descVersion='73'>
 	<author>VertexFloat</author>
-	<version>1.0.0.9</version>
+	<version>1.0.1.0</version>
 	<title>
 		<en>Beware Of Straw</en>
 		<de>Achte Auf Dein Stroh</de>
@@ -56,6 +56,9 @@ Changelog (1.0.0.9) :
 - descVersion updated
 - new mod icon
 
+Changelog (1.0.1.0) :
+- descVersion updated
+
 For more information, help, and report issues please visit <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
 ]]>
 </en>
@@ -104,6 +107,9 @@ For more information, help, and report issues please visit <a href='https://gith
 - neue Spielscreenshots
 - Neues Mod-Symbol
 
+Änderungsprotokoll (1.0.1.0) :
+- descVersion aktualisiert
+
 Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
 ]]>
 </de>
@@ -151,6 +157,9 @@ Dziennik zmian (1.0.0.9) :
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 - nowa ikona modyfikacji
+
+Dziennik zmian (1.0.1.0) :
+- zaktualizowano descVersion
 
 Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
 ]]>
