@@ -1,43 +1,37 @@
 -- @author: 4c65736975, All Rights Reserved
--- @version: 1.0.0.8, 04/09/2022
+-- @version: 1.0.0.9, 04|05|2023
 -- @filename: BewareOfStraw.lua
 
--- Changelog (1.0.0.1) :
---
+-- Changelog (1.0.0.1):
 -- adaptation to new functions of mod
 
--- Changelog (1.0.0.2) :
---
+-- Changelog (1.0.0.2):
 -- updated to patch 1.4.1
 
--- Changelog (1.0.0.3) :
---
+-- Changelog (1.0.0.3):
 -- improved and more clearly code
 -- fixed compatibility with Precision Farming DLC
 
--- Changelog (1.0.0.4) :
---
+-- Changelog (1.0.0.4):
 -- merged code to make it more clearly and to avoid unnecessery files
 
--- Changelog (1.0.0.5) :
---
+-- Changelog (1.0.0.5):
 -- fixed lua error while harvesting maize/sunflower
 
--- Changelog (1.0.0.6) :
---
+-- Changelog (1.0.0.6):
 -- fixed lua error while collecting vines/grapes
 
--- Changelog (1.0.0.7) :
---
+-- Changelog (1.0.0.7):
 -- merged code to make it more clearly and to avoid unnecessery files
 
--- Changelog (1.0.0.8) :
---
+-- Changelog (1.0.0.8):
 -- improved and more clearly code
 -- minor bugs fixed
 
-local overwritten = false
-local yieldChance = 16 -- 1/16
+-- Changelog (1.0.0.9):
+-- cleaned code
+
+local STRAW_YIELD_CHANCE = 16 -- 1/16
 
 function overwriteGameFunctions()
 	local function processCutterArea(superFunc, self, workArea, dt)
@@ -56,16 +50,16 @@ function overwriteGameFunctions()
 				local fruitTypeDesc = g_fruitTypeManager:getFruitTypeByIndex(fruitTypeIndex)
 				local chopperValue = fieldGroundSystem:getChopperTypeValue(fruitTypeDesc.chopperTypeIndex)
 				local realArea, area, sprayFactor, plowFactor, limeFactor, weedFactor, stubbleFactor, rollerFactor, beeYieldBonusPerc, growthState, _, terrainDetailPixelsSum = FSDensityMapUtil.cutFruitArea(fruitTypeIndex, xs, zs, xw, zw, xh, zh, true, spec.allowsForageGrowthState, chopperValue)
-				local lsx, lsy, lsz, lex, ley, lez, lineRadius = DensityMapHeightUtil.getLineByAreaDimensions(xs, ys, zs, xw, yw, zw, xh, yh, zh)
 				local fillType = g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(fruitTypeIndex)
 
 				if fillType ~= nil then
+					local lsx, lsy, lsz, lex, ley, lez, lineRadius = DensityMapHeightUtil.getLineByAreaDimensions(xs, ys, zs, xw, yw, zw, xh, yh, zh)
 					local pickedUpLiters = -DensityMapHeightUtil.tipToGroundAroundLine(self, -math.huge, fillType, lsx, lsy, lsz, lex, ley, lez, lineRadius, nil, nil, false, nil)
 
 					if pickedUpLiters > 0 then
 						local fruitDesc = g_fruitTypeManager:getFruitTypeByIndex(fruitTypeIndex)
 						local literPerSqm = fruitDesc.literPerSqm
-						local lastCutterArea = ((pickedUpLiters / (g_currentMission:getFruitPixelsToSqm() * literPerSqm)) / 16)
+						local lastCutterArea = pickedUpLiters / (g_currentMission:getFruitPixelsToSqm() * literPerSqm) / 16
 
 						if fruitTypeIndex ~= spec.currentInputFruitType then
 							spec.currentInputFruitType = fruitTypeIndex
@@ -153,7 +147,7 @@ function overwriteGameFunctions()
 					else
 						workArea.chopperAreaIndex = nil
 
-						Logging.xmlWarning(self.xmlFile, "Invalid chopperAreaIndex '%d' for workArea '%d'!", workArea.chopperAreaIndex, workArea.index)
+						Logging.xmlWarning(self.xmlFile, 'Invalid chopperAreaIndex "%d" for workArea "%d"!', workArea.chopperAreaIndex, workArea.index)
 					end
 				end
 
@@ -197,7 +191,7 @@ function overwriteGameFunctions()
 			end
 
 			if self:getFillUnitLastValidFillType(spec.fillUnitIndex) == outputFillType or self:getFillUnitLastValidFillType(spec.bufferFillUnitIndex) == outputFillType then
-				local liters = realArea * g_currentMission:getFruitPixelsToSqm() * litersPerSqm * strawRatio
+				local liters = (realArea * g_currentMission:getFruitPixelsToSqm() * litersPerSqm) * strawRatio
 
 				if liters > 0 then
 					local inputBuffer = spec.processing.inputBuffer
@@ -245,11 +239,14 @@ function overwriteGameFunctions()
 
 					if additivesFillLevel > 0 then
 						local usage = spec.additives.usage * deltaFillLevel
-						local availableUsage = usage / additivesFillLevel
 
-						deltaFillLevel = deltaFillLevel * (1 + 0.05 * availableUsage)
+						if usage > 0 then
+							local availableUsage = math.min(additivesFillLevel / usage, 1)
 
-						self:addFillUnitFillLevel(self:getOwnerFarmId(), spec.additives.fillUnitIndex, -usage, self:getFillUnitFillType(spec.additives.fillUnitIndex), ToolType.UNDEFINED)
+							deltaFillLevel = deltaFillLevel * (1 + 0.05 * availableUsage)
+
+							self:addFillUnitFillLevel(self:getOwnerFarmId(), spec.additives.fillUnitIndex, -usage, self:getFillUnitFillType(spec.additives.fillUnitIndex), ToolType.UNDEFINED)
+						end
 					end
 				end
 			end
@@ -302,44 +299,32 @@ function overwriteGameFunctions()
 
 			local loadInfo = self:getFillVolumeLoadInfo(spec.loadInfoIndex)
 
-			if getIsCollectingStraw(spec.attachedCutters) == true then
-				local randomYield = math.random(1, yieldChance)
+			for cutter, _ in pairs(spec.attachedCutters) do
+				if cutter ~= nil and cutter.spec_cutter ~= nil then
+					if cutter.spec_cutter.useWindrow and (g_fillTypeManager:getFillTypeNameByIndex(g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(cutter.spec_cutter.currentInputFruitType)) == 'STRAW') then
+						local randomYield = math.random(1, STRAW_YIELD_CHANCE)
 
-				if randomYield == 1 then
+						if randomYield == 1 then
+							return self:addFillUnitFillLevel(self:getOwnerFarmId(), fillUnitIndex, deltaFillLevel, fillType, ToolType.UNDEFINED, loadInfo)
+						else
+							return 0
+						end
+					end
+
 					return self:addFillUnitFillLevel(self:getOwnerFarmId(), fillUnitIndex, deltaFillLevel, fillType, ToolType.UNDEFINED, loadInfo)
-				else
-					return 0
 				end
-			else
-				return self:addFillUnitFillLevel(self:getOwnerFarmId(), fillUnitIndex, deltaFillLevel, fillType, ToolType.UNDEFINED, loadInfo)
 			end
 		end
 
 		return 0
 	end
 
-	function getIsCollectingStraw(attachedCutters)
-		for cutter, _ in pairs(attachedCutters) do
-			if cutter ~= nil and cutter.spec_cutter ~= nil then
-				if cutter.spec_cutter.useWindrow and (g_fillTypeManager:getFillTypeNameByIndex(g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(cutter.spec_cutter.currentInputFruitType)) == "STRAW") then
-					return true
-				end
-			end
-		end
-
-		return false
+	Cutter['processCutterArea'] = function (...)
+		return processCutterArea(Cutter['processCutterArea'], ...)
 	end
 
-	if not overwritten then
-		overwritten = true
-
-		Cutter["processCutterArea"] = function (...)
-			return processCutterArea(Cutter["processCutterArea"], ...)
-		end
-
-		Combine["addCutterArea"] = function (...)
-			return addCutterArea(Combine["addCutterArea"], ...)
-		end
+	Combine['addCutterArea'] = function (...)
+		return addCutterArea(Combine['addCutterArea'], ...)
 	end
 end
 
