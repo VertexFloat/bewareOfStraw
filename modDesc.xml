@@ -1,170 +1,237 @@
 ﻿<?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='73'>
+<modDesc descVersion='74'>
 	<author>VertexFloat</author>
-	<version>1.0.1.0</version>
+	<version>1.0.1.1</version>
 	<title>
 		<en>Beware Of Straw</en>
 		<de>Achte Auf Dein Stroh</de>
+		<fr>Méfiez-vous De La Paille</fr>
 		<pl>Uważaj Na Słomę</pl>
 	</title>
-	<iconFilename>icon.png</iconFilename>
-	<multiplayer supported='true'/>
-
 	<description>
-<en>
-<![CDATA[This modification allows the straw to be drawn in by the header of the working combine. After being pulled in, it passes through the threshing machine again and is ejected in a smaller amount. It is also possible that small amount of grain will be recovered when it passes through the combine again. However, it is not profitable. Therefore, be sure to raise the header. Otherwise, you may lose useful material.
+		<en><![CDATA[This modification allows the straw to be drawn in by the header of the working combine. After being pulled in, it passes through the threshing machine again and is ejected in a smaller amount.
+It is also possible that small amount of grain will be recovered when it passes through the combine again. However, it is not profitable. Therefore, be sure to raise the header. Otherwise, you may lose useful material.
 
-Changelog (1.0.0.1) :
+Changelog (1.0.0.1):
 - corrected script naming
 - improved mod icon
 
-Changelog (1.0.0.2) :
+Changelog (1.0.0.2):
 - new features have been added (The straw comes out of the combine again, but in smaller amounts. There is also a chance that you will recover a small amount of the remaining grain from it.)
 - new modification icon
 - descVersion updated
 
-Changelog (1.0.0.3) :
+Changelog (1.0.0.3):
 - updated to patch 1.4.1
 - descVersion updated
 
-Changelog (1.0.0.4) :
+Changelog (1.0.0.4):
 - improved compatibility with Precision Farming
 - improved and more clearly code
 
-Changelog (1.0.0.5) :
+Changelog (1.0.0.5):
 - fixed lua error while harvesting maize/sunflower
 - merged code and deleted unnecessary files
 - descVersion updated
 
-Changelog (1.0.0.6) :
+Changelog (1.0.0.6):
 - fixed lua error while collecting vines/grapes
 
-Changelog (1.0.0.7) :
+Changelog (1.0.0.7):
 - new game screenshots
 - descVersion updated
 - improved mod icon
 
-Changelog (1.0.0.8) :
+Changelog (1.0.0.8):
 - improved and more clearly code
 - new game screenshots
 - descVersion updated
 - minor bugs fixed
 - new mod icon
 
-Changelog (1.0.0.9) :
+Changelog (1.0.0.9):
 - new game screenshots
 - descVersion updated
 - new mod icon
 
-Changelog (1.0.1.0) :
+Changelog (1.0.1.0):
 - descVersion updated
 
-For more information, help, and report issues please visit <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
-]]>
-</en>
-<de>
-<![CDATA[Dank dieser Modifikation kann loses Strohschwad vom Schneidwerk eingezogen werden. Nach schwad dem Einziehen durchläuft es erneut die Dreschmaschine und wird in geringerer Menge ausgeworfen. Es ist auch möglich, dass eine kleine Menge Getreide zurückgewonnen wird, wenn es erneut durch den Mähdrescher läuft. Es ist jedoch nicht rentabel. Stell daher sicher, dass du dein Schneidwerk aushebst im Arbeitsmodus, ansonsten wirst du nützliches Material verlieren.
+Changelog (1.0.1.1):
+- new game screenshots
+- descVersion updated
+- new mod icon
+- cleaned code
 
-Änderungsprotokoll (1.0.0.1) :
+For more information, help, and report issues please visit <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.]]></en>
+		<de><![CDATA[Dank dieser Modifikation kann loses Strohschwad vom Schneidwerk eingezogen werden. Nach schwad dem Einziehen durchläuft es erneut die Dreschmaschine und wird in geringerer Menge ausgeworfen.
+Es ist auch möglich, dass eine kleine Menge Getreide zurückgewonnen wird, wenn es erneut durch den Mähdrescher läuft. Es ist jedoch nicht rentabel. Stell daher sicher, dass du dein Schneidwerk aushebst im Arbeitsmodus, ansonsten wirst du nützliches Material verlieren.
+
+Änderungsprotokoll (1.0.0.1):
 - skript Benennung korrigiert
 - verbessertes Mod-Symbol
 
-Änderungsprotokoll (1.0.0.2) :
+Änderungsprotokoll (1.0.0.2):
 - neue Funktionen wurden hinzugefügt (Das Stroh kommt wieder aus dem Mähdrescher, aber in kleineren Mengen. Es besteht auch die Möglichkeit, dass Sie eine kleine Menge des restlichen Getreides daraus gewinnen.)
 - descVersion aktualisiert
 - mod neues symbol
 
-Änderungsprotokoll (1.0.0.3) :
+Änderungsprotokoll (1.0.0.3):
 - auf Patch 1.4.1 aktualisiert
 - descVersion aktualisiert
 
-Änderungsprotokoll (1.0.0.4) :
+Änderungsprotokoll (1.0.0.4):
 - verbesserte Kompatibilität mit Precision Farming
 - verbesserter und übersichtlicherer Code
 
-Änderungsprotokoll (1.0.0.5) :
+Änderungsprotokoll (1.0.0.5):
 - lua-Fehler beim Ernten von Mais/Sonnenblumen behoben
 - code zusammengeführt und unnötige Dateien gelöscht
 - descVersion aktualisiert
 
-Änderungsprotokoll (1.0.0.6) :
+Änderungsprotokoll (1.0.0.6):
 - lua-Fehler beim Sammeln von Reben/Trauben behoben
 
-Änderungsprotokoll (1.0.0.7) :
+Änderungsprotokoll (1.0.0.7):
 - descVersion aktualisiert
 - verbessertes Mod-Symbol
 - neue Spielscreenshots
 
-Änderungsprotokoll (1.0.0.8) :
+Änderungsprotokoll (1.0.0.8):
 - verbesserter und übersichtlicherer Code
 - descVersion aktualisiert
 - neue Spiel-Screenshots
 - kleine Fehler behoben
 - Neues Mod-Symbol
 
-Änderungsprotokoll (1.0.0.9) :
+Änderungsprotokoll (1.0.0.9):
 - descVersion aktualisiert
 - neue Spielscreenshots
 - Neues Mod-Symbol
 
-Änderungsprotokoll (1.0.1.0) :
+Änderungsprotokoll (1.0.1.0):
 - descVersion aktualisiert
 
-Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
-]]>
-</de>
-<pl>
-<![CDATA[Ta modyfikacja powoduje, że słoma może zostać wciągnięta przez heder pracującego kombajnu. Po wciągnięciu ponownie przechodzi przez młocarnię i zostaje wyrzucona w mniejszej ilości. Możliwe jest również, że po ponownym przejściu przez kombajn zostaną odzyskane nie wielkie ilości zboża. Jest to jednak nie opłacalne. Dlatego pamiętaj o podnoszeniu hedera. Inaczej możesz stracić przydatny materiał.
+Änderungsprotokoll (1.0.1.1):
+- descVersion aktualisiert
+- neue Spielscreenshots
+- Neues Mod-Symbol
+- gereinigter Code
 
-Dziennik zmian (1.0.0.1) :
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.]]></de>
+		<fr><![CDATA[Cette modification permet à la paille d'être aspirée par la tête de la moissonneuse-batteuse. Après avoir été aspiré, il passe à nouveau dans la batteuse et est éjecté en plus petite quantité.
+Il est également possible qu'une petite quantité de grain soit récupérée lorsqu'elle passe à nouveau dans la moissonneuse-batteuse. Cependant, ce n'est pas rentable. Par conséquent, assurez-vous de relever l'en-tête. Sinon, vous risquez de perdre du matériel utile.
+
+Journal des modifications (1.0.0.1) :
+- nommage du script corrigé
+- icône de mod améliorée
+
+Journal des modifications (1.0.0.2) :
+- de nouvelles fonctionnalités ont été ajoutées (La paille sort à nouveau de la moissonneuse-batteuse, mais en plus petites quantités. Il y a aussi une chance que vous récupériez une petite quantité du grain restant.)
+- nouvelle icône de modification
+- descVersion mise à jour
+
+Journal des modifications (1.0.0.3) :
+- mise à jour vers le patch 1.4.1
+- descVersion mise à jour
+
+Journal des modifications (1.0.0.4) :
+- meilleure compatibilité avec Precision Farming
+- code amélioré et plus clair
+
+Journal des modifications (1.0.0.5) :
+- Correction d'une erreur Lua lors de la récolte de maïs/tournesol
+- code fusionné et fichiers inutiles supprimés
+- descVersion mise à jour
+
+Journal des modifications (1.0.0.6) :
+- correction d'une erreur lua lors de la collecte de vignes/raisins
+
+Journal des modifications (1.0.0.7) :
+- nouvelles captures d'écran du jeu
+- descVersion mise à jour
+- icône de mod améliorée
+
+Journal des modifications (1.0.0.8) :
+- code amélioré et plus clair
+- nouvelles captures d'écran du jeu
+- descVersion mise à jour
+- bugs mineurs corrigés
+- nouvelle icône de module
+
+Journal des modifications (1.0.0.9) :
+- nouvelles captures d'écran du jeu
+- descVersion mise à jour
+- nouvelle icône de module
+
+Journal des modifications (1.0.1.0) :
+- descVersion mise à jour
+
+Journal des modifications (1.0.1.1) :
+- nouvelles captures d'écran du jeu
+- descVersion mise à jour
+- nouvelle icône de module
+- code nettoyé
+
+Pour plus d'informations, de l'aide et signaler des problèmes, veuillez visiter <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.]]></fr>
+		<pl><![CDATA[Ta modyfikacja powoduje, że słoma może zostać wciągnięta przez heder pracującego kombajnu. Po wciągnięciu ponownie przechodzi przez młocarnię i zostaje wyrzucona w mniejszej ilości.
+Możliwe jest również, że po ponownym przejściu przez kombajn zostaną odzyskane nie wielkie ilości zboża. Jest to jednak nie opłacalne. Dlatego pamiętaj o podnoszeniu hedera. Inaczej możesz stracić przydatny materiał.
+
+Dziennik zmian (1.0.0.1):
 - poprawione nazewnictwo skryptu
 - ulepszona ikona modyfikacji
 
-Dziennik zmian (1.0.0.2) :
+Dziennik zmian (1.0.0.2):
 - dodano nowe funkcje (Słoma ponownie wylatuje z kombajnu, ale w mniejszych ilościach. Jest również szansa, że pozyskasz z niej niewielkie ilości pozostałego zboża.)
 - zaktualizowano descVersion
 - nowa ikona modyfikacji
 
-Dziennik zmian (1.0.0.3) :
+Dziennik zmian (1.0.0.3):
 - zaktualizowano do patch 1.4.1
 - zaktualizowano descVersion
 
-Dziennik zmian (1.0.0.4) :
+Dziennik zmian (1.0.0.4):
 - poprawiona kompatybilność z Rolnictwem Precyzyjnym
 - ulepszony i bardziej przejrzysty kod
 
-Dziennik zmian (1.0.0.5) :
+Dziennik zmian (1.0.0.5):
 - naprawiono błąd lua podczas zbioru kukurydzy/słonecznika
 - scalony kod i usunięte zbędne pliki
 - zaktualizowano descVersion
 
-Dziennik zmian (1.0.0.6) :
+Dziennik zmian (1.0.0.6):
 - naprawiono błąd lua podczas zbierania winorośli/winogrona
 
-Dziennik zmian (1.0.0.7) :
+Dziennik zmian (1.0.0.7):
 - ulepszona ikona modyfikacji
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 
-Dziennik zmian (1.0.0.8) :
+Dziennik zmian (1.0.0.8):
 - ulepszony i bardziej przejrzysty kod
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 - naprawiono drobne błędy
 - nowa ikona modyfikacji
 
-Dziennik zmian (1.0.0.9) :
+Dziennik zmian (1.0.0.9):
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 - nowa ikona modyfikacji
 
-Dziennik zmian (1.0.1.0) :
+Dziennik zmian (1.0.1.0):
 - zaktualizowano descVersion
 
-Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.
-]]>
-</pl>
+Dziennik zmian (1.0.1.1):
+- zaktualizowano descVersion
+- nowe zrzuty ekranu z gry
+- nowa ikona modyfikacji
+- wyczyszczony kod
+
+Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/bewareOfStraw'>GitHub</a>.]]></pl>
 	</description>
+	<iconFilename>icon_bewareOfStraw.png</iconFilename>
+	<multiplayer supported='true'/>
 
 	<extraSourceFiles>
 		<sourceFile filename='src/BewareOfStraw.lua'/>
