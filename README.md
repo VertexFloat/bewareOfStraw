@@ -13,7 +13,7 @@
 		·
 		<a href='https://github.com/4c65736975/bewareOfStraw/issues'>Request Feature</a>
 		·
-		<a href='https://github.com/4c65736975/bewareOfStraw/blob/main/CHANGELOG'>Changelog</a>
+		<a href='https://github.com/4c65736975/bewareOfStraw/blob/main/CHANGELOG.md'>Changelog</a>
 	</p>
 </div>
 <details>
