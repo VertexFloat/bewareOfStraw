@@ -12,6 +12,8 @@
 		<a href='https://github.com/4c65736975/bewareOfStraw/issues'>Report Bug</a>
 		·
 		<a href='https://github.com/4c65736975/bewareOfStraw/issues'>Request Feature</a>
+		·
+		<a href='https://github.com/4c65736975/bewareOfStraw/blob/main/CHANGELOG'>Changelog</a>
 	</p>
 </div>
 <details>
