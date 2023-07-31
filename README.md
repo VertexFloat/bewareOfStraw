@@ -55,7 +55,7 @@ This modification allows the straw to be drawn in by the header of the working c
 
 ## Getting started
 
-If you want to install latest official version, you can [download](https://www.farming-simulator.com/mod.php?lang=pl&country=pl&mod_id=224583&title=fs2022) it like other mods.
+If you want to install latest official version, you can [download](https://www.farming-simulator.com/mod.php?mod_id=224583&title=fs2022) it like other mods.
 <br/>
 
 ### Prerequisites
