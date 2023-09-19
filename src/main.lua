@@ -1,6 +1,6 @@
 -- @author: 4c65736975, All Rights Reserved
--- @version: 1.0.0.9, 04|05|2023
--- @filename: BewareOfStraw.lua
+-- @version: 1.0.1.0, 04|05|2023
+-- @filename: main.lua
 
 -- Changelog (1.0.0.1):
 -- adaptation to new functions of mod
