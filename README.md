@@ -60,15 +60,17 @@ If you want to install latest official version, you can [download](https://www.f
 
 ### Prerequisites
 
-* [Farming Simulator 22 (PC)](https://www.farming-simulator.com/buy-now.php?platform=pc&code=DANIO)
-* [Farming Simulator 22 (PC-Download)](https://www.farming-simulator.com/buy-now.php?platform=pcdigital&code=DANIO)
+- [Farming Simulator 22 (PC)](https://www.farming-simulator.com/buy-now.php?platform=pc&code=DANIO)
+- [Farming Simulator 22 (PC-Download)](https://www.farming-simulator.com/buy-now.php?platform=pcdigital&code=DANIO)
 
 ### Installation
 
 1. Clone the repo
+
 ```sh
 git clone https://github.com/4c65736975/bewareOfStraw
 ```
+
 2. Open cloned folder.
 3. Run modInstaller.exe.
 4. That's it, if everything went as it should, you can delete cloned folder.
@@ -99,8 +101,8 @@ Distributed under the GPL-3.0 license. See [LICENSE](https://github.com/4c657369
 
 ## Acknowledgments
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [Best README Template](https://github.com/othneildrew/Best-README-Template)
-* [Hay icons created by Vitaly Gorbachev - Flaticon](https://www.flaticon.com/free-icons/hay)
+- [Choose an Open Source License](https://choosealicense.com)
+- [Best README Template](https://github.com/othneildrew/Best-README-Template)
+- [Hay icons created by Vitaly Gorbachev - Flaticon](https://www.flaticon.com/free-icons/hay)
 
 <p align="right">&#x2191 <a href="#top">back to top</a></p>
